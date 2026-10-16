@@ -1,19 +1,16 @@
+
 """
-Tool Name: AI Prompt Generator for Digital Agency Clients
-Description: This script collects custom inputs from clients and dynamically 
-generates tailored AI solution prompts for their business challenges.
+Lesson 1.4: Build an AI prompt from user input.
 """
 
-# Collect user details dynamically so the generated prompt is tailored to each client's unique context.
+# Ask for details so the prompt matches the user's business
 name = input("Enter your name: ")
 business = input("Enter your business type: ")
-problem = input("Enter one problem your business faces: ")
+problem = input("What problem does your business face? ")
 
-# Greet the user personally to create an engaging and interactive onboarding experience.
-print(f"\nWelcome, {name}! Let's generate your custom AI prompt.")
+# Use the answers to create a personalized AI prompt
+prompt = f"Suggest 3 AI solutions for a {business} that struggles with {problem}."
 
-# Separate raw inputs from the final output format to keep the prompt structure clean and reusable.
-ai_prompt = f"Suggest 3 AI solutions for a {business} that struggles with {problem}."
-
-print("\n--- Your Generated AI Prompt ---")
-print(ai_prompt)
+print(f"\nWelcome, {name}!")
+print("\n--- Your AI Prompt ---")
+print(prompt)
