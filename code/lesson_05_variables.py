@@ -8,7 +8,7 @@ and calculates the estimated cost of tokens used in a chat.
 """
 
 # Store the AI model profile using four core data types.
-model_name: str = "llama3.2"
+model_name: str = "ollama3.2"
 context_window: int = 8192
 price_per_1k_tokens: float = 0.5
 runs_locally: bool = True
