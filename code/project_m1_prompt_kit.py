@@ -1,35 +1,68 @@
+
 """
-AI Prompt Kit for a Local Business
+AI Prompt Kit for local businesses.
+This tool creates 3 useful AI prompts for small business owners.
 """
 
-business_name = input("Enter your business name")
-monthly_budget = int(input("Enter your monthly budgets:"))
-City = input("Enter your city:")
-main_customers = input("Enter your main customers:")
-monthly_budget =int(input("Enter your monthly budget: "))
+# Ask for business details so prompts can be personalised.
+business_name = input("Business name: ")
+business_type = input("Business type: ")
+city = input("City: ")
+customers = input("Main customers: ")
 
-print()
-print(f"Bussiness Name: {business_name}")
-print(f"BussinessType: {business_name}")
-print(f"City: {City}")
-print(f"Main Customers: {main_customers}")
-print(f"Monthly Budget: ${monthly_budget:}")
+# Convert the monthly budget from text into an integer.
+budget = int(input("Monthly budget (PKR): "))
+
+# Display a clear heading so the user can identify their prompt kit.
+print("\n" + "=" * 41)
+print(f"   AI Prompt Kit for {business_name}")
+print("=" * 41)
+
+# Prompt 1: Include the audience and tone to make marketing content useful.
+marketing_prompt = f"""
+Act as a professional social media marketer.
+Create one creative Instagram post idea for {business_name},
+a {business_type} in {city}.
+Target audience: {customers}.
+Use a friendly tone and include one call to action.
+"""
+
+print("\n[1] Marketing")
+print(marketing_prompt)
+
+# Prompt 2: Give the AI a role and a clear customer-service task.
+customer_service_prompt = f"""
+Act as the customer service manager of {business_name}.
+Write a polite reply to an unhappy customer whose order
+arrived late. Apologise sincerely and offer a suitable solution.
+Business type: {business_type}.
+Use a friendly and professional tone.
+Do not promise an unapproved discount.
+"""
+
+print("\n[2] Customer Service")
+print(customer_service_prompt)
+
+# Prompt 3: Mention the budget so growth ideas remain affordable.
+growth_prompt = f"""
+Act as a small-business AI consultant.
+Suggest exactly 3 low-cost AI ideas for {business_name},
+a {business_type} in {city}.
+Target customers: {customers}.
+Monthly budget: {budget} PKR.
+Explain the benefit and estimated monthly cost of each idea.
+Keep the total estimated cost within the budget.
+Do not invent prices; clearly label estimates that need verification.
+"""
+
+print("\n[3] Growth")
+print(growth_prompt)
+
+print("\n" + "=" * 41)
+print("Your 3 AI prompts are ready!")
+print("=" * 41)
 
 
 
-marketing = (
-    f"Create a marketing strategy for {business_name}, a {business_name} located in {City}. "
-    f"The main customers are {main_customers}. The monthly budget is ${monthly_budget:}."
-)
 
 
-customer_service =(
-    f"Create a customer service strategy for {business_name}, a {Business_type} located in {City}. "
-    f"The main customers are {main_customers}. The monthly budget is ${monthly_budget:}."
-)
-
-
-growth (
-    f"Create a growth strategy for {business_name}, a {Business_type} located in {City}. "
-    f"The main customers are {main_customers}. The monthly budget for growth is ${monthly_budget}"
-)
